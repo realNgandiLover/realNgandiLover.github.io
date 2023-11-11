@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">/* Inline CSS */
+        body {font-family: Arial;}
+        .hidden-header {
+ 		   visibility: hidden;
+		}
+
+		.break {
+			background-color: rgb(255, 255, 255);
+		}
+
+        .keynote {
+        	background-color: rgb(109, 14, 39);
+        	color: #FFFFFF;
+        }
+
+        .session {
+		    background-color: rgb(163, 120, 157);
+		    color: #FFFFFF; 
+		}
+
+		.content-O {
+			background-color: rgb(252, 237, 242);
+		}
+
+		.content-E {
+			background-color: rgb(241, 227, 232);
+		}
+
+		.content-sp-O {
+			background-color: rgb(253, 222, 218);
+		}
+
+		.content-sp-E {
+			background-color: rgb(241, 212, 209);
+		}
+
+		.activity {
+			background-color: rgb(161, 205, 235);
+		}
+
+		.poster {
+			background-color: rgb(231, 186, 212);
+		}
+
+		.dinner {
+			background-color: rgb(231, 186, 212);
+		}
+
+		.poster-O {
+
+		}
+
+		.poster-E {
+
+		}
+
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          width: 33.33%; /* Equal width */
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+        .tabcontent table {
+            width: 100%; /* Full-width */
+            border-collapse: collapse;
+        }
+
+        .tabcontent th, .tabcontent td {
+            border: 1px solid #ddd; /* Add borders to table cells */
+            padding: 8px; /* Padding for cells */
+            text-align: center; /* Align text to the left */
+        }
+
+        .tabcontent td, .tabcontent th {
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        /* Responsive layout - makes the tab buttons stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .tab button {
+                width: 100%;
+            }
+            .tabcontent table {
+                display: block;
+                overflow-x: auto; /* Allow horizontal scrolling on small screens */
+            }
+        .tabcontent table {
+            display: block;
+            overflow-x: auto;
+        }
+        .tabcontent th, .tabcontent td {
+            white-space: normal; /* Allow text wrapping */
+            font-size: smaller; /* Reduce font size */
+        }
+
+        }
+</style>
+<script>
+    // Inline JavaScript
+    function openTab(evt, dayName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(dayName).style.display = "block";
+        if (evt) {
+            evt.currentTarget.className += " active";
+        }
+    }
+
+    // Open the "Friday" tab by default when the page loads
+    document.addEventListener("DOMContentLoaded", function() {
+        openTab(null, 'Friday');
+    });
+</script>
+<div class="tab">
+	<button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Friday')">Friday</button>
+	<button class="tablinks" onclick="openTab(event, 'Saturday')">Saturday</button>
+	<button class="tablinks" onclick="openTab(event, 'Poster')">Poster</button>
+</div>
+
+<div class="tabcontent" id="Friday">
+<h3>Friday, January 26</h3>
+
+<div style="overflow-x:auto;">
+<table style="width:100%;">
+    <colgroup>
+        <col style="width: 10%;">
+        <col style="width: 35%;">
+        <col style="width: 35%;">
+    </colgroup>
+	
+	<tr>
+		<td>8:00-9:00</td>
+		<td colspan="2">Breakfast &amp; Registration</td>
+	</tr>
+	<tr>
+		<td class="keynote">9:00-10:00</td>
+		<td class="keynote" colspan="2"><p><strong>Keynote: Doreen Georgi</strong></p><p>(32-123)</p></td>
+	</tr>
+	<tr>
+		<td>10:00-10:30</td>
+		<td colspan="2">Break</td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td class="session"><p><strong>Session 1</strong> (32-141)</p></td>
+		<td class="session"><p><strong>Session 2</strong> (32-155)</p></td>
+	</tr>
+	<tr>
+		<td class="content-O">10:30-11:00</td>
+		<td class="content-O">
+		<p><strong>The Learnability of Syntax Islands</strong></p>
+
+		<p>Annika Heuser, Hector Vazquez Martinez &amp; Charles Yang</p>
+		</td>
+		<td class="content-O">
+		<p><strong>Covert Reciprocals</strong></p>
+
+		<p>Jad Wehbe</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="content-E">11:00-11:30</td>
+		<td class="content-E">
+		<p><strong>Size matters: clause structure and selective opacity in Swahili relatives</strong></p>
+
+		<p>Tom Meadows</p>
+		</td>
+		<td class="content-E">
+		<p><strong>What makes plurality sentient? Grouphood as the structure of number in Ktunaxa</strong></p>
+
+		<p>Rose Underhill</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="content-O">11:30-12:00</td>
+		<td class="content-O">
+		<p><strong>Syntactic ergativity without inversion in Kalaallisut</strong></p>
+
+		<p>Amy Rose Deal, Line Mikkelsen &amp; Ellen Thrane</p>
+		</td>
+		<td class="content-O">
+		<p><strong>Higher order quantification outside questions: the case of free relatives</strong></p>
+
+		<p>Luis Alonso-Ovalle</p>
+		</td>
+	</tr>
+	<tr>
+		<td>12:00-1:30</td>
+		<td colspan="2">Lunch (on your own!)</td>
+	</tr>
+	<tr>
+		<td class="keynote">1:30-2:30</td>
+		<td class="keynote" colspan="2">
+			<p><strong>Keynote: Victoria Chen</strong></p>
+			<p><strong>(32-123)</strong></p>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th>
+		<td class="session"><p><strong>Special Session: Austronesian Languages</strong> (32-141)</p></td>
+		<td class="session"><p><strong>Session 4</strong> (32-155)</p></td>
+	</tr>
+	<tr>
+		<td class="content-O">2:30-3:00</td>
+		<td class="content-sp-O">
+		<p><strong>The Malayic verbal phase and Cyclic Linearization</strong></p>
+
+		<p>Michael Yoshitaka Erlewine &amp; Carly Sommerlot</p>
+		</td>
+		<td class="content-O">
+		<p><strong>On the monotonicity of attitudes: NPIs and clausal embedding</strong></p>
+
+		<p>Tanya Bondarenko &amp; Patrick Elliott</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="content-E">3:00-3:30</td>
+		<td class="content-sp-E">
+		<p><strong>The morphological distribution of AV vs. PV in Formosan voice systems</strong></p>
+
+		<p>Yvette Wu</p>
+		</td>
+		<td class="content-E">
+		<p><strong>Aspectual domains for adverbs</strong></p>
+
+		<p>Aviv Schoenfeld, Moshe E. Bar-Lev &amp; Roni Katzir</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="break">3:30-4:00</td>
+		<td class="break" colspan="2">Break</td>
+	</tr>
+	<tr>
+		<td class="content-O">4:00-4:30</td>
+		<td class="content-sp-O">
+		<p><strong>Recalling adjective-noun order<br />
+		in Tagalog is sensitive to phonological markedness constraints</strong></p>
+
+		<p>Jed Sam Pizarro-Guevara, Alessa Farinella, John Michael De Pano &amp; Patricia Asuncion</p>
+		</td>
+		<td class="content-O">
+		<p><strong>Before and after decomposing first and last</strong></p>
+
+		<p>Johanna Alstott</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="content-E">4:30-5:00</td>
+		<td class="content-sp-E">
+		<p><strong>How to be a word in&nbsp;</strong><strong>Atara Imere</strong></p>
+
+		<p>Adam Chong &amp; Coppe van Urk</p>
+		</td>
+		<td class="content-E">
+		<p><strong>Fake Mass Nouns and Associative Plurality</strong></p>
+
+		<p>Yağmur Sağ</p>
+		</td>
+	</tr>
+	<tr>
+		<td>5:00-6:00</td>
+		<td colspan="2">Break (and walk to MIT museum)</td>
+	</tr>
+	<tr>
+		<td class="poster">6:00-7:00</td>
+		<td class="poster"><strong>Poster Session A</strong></td>
+		<td class="poster" rowspan="2">
+			<p><strong>bar + hors d'œuvres </strong></p>
+			<p><strong><a href="https://mitmuseum.mit.edu/visit/hours-admission-directions" style="box-sizing: inherit; background-color: transparent; color: inherit; outline-width: 0px;" target="_blank">MIT Museum</a></strong></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="poster">7:00-8:00</td>
+		<td class="poster"><strong>Poster Session B</strong></td>
+	</tr>
+</table>
+
+</div>
+</div>
+
+<div class="tabcontent" id="Saturday">
+    <h3>Saturday, January 27</h3>
+ 	<div style="overflow-x:auto;">
+	<table style="width:100%;">
+	    <colgroup>
+	        <col style="width: 10%;">
+	        <col style="width: 35%;">
+	        <col style="width: 35%;">
+	    </colgroup>
+		<tr>
+			<td>8:00-9:00</td>
+			<td colspan="2">Breakfast</td>
+		</tr>
+		<tr>
+			<td class="keynote">9:00-10:00</span></td>
+			<td class="keynote" colspan="2">
+				<p><strong>Lyn Tieu</strong></p>
+				<p>(32-123)</p>
+			</td>
+		</tr>
+		<tr>
+			<th>&nbsp;</th>
+			<td class="session">
+				<p><strong>Special session: Experimental Methods in Linguistic Theory&nbsp;</strong>(32-141)</p>
+			</td>
+			<td class="session">
+				<p><strong>Session 4&nbsp;</strong>(32-155)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-O">10:00-10:30</td>
+			<td class="content-sp-O">
+			<p><strong>Priming parasitic gaps: multiple ways to produce silence</strong></p>
+
+			<p>Shota Momma, Brian Dillon &amp; Kyle Johnson</p>
+			</td>
+			<td class="content-O" class="content-O">
+			<p><strong>The third person is present: an argument from determiners in generic statements</strong></p>
+
+			<p>Artemis Alexiadou, Johannes Hein, Ivona Ilić &amp; Uli Sauerland</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-E">10:30-11:00</td>
+			<td class="content-sp-E">
+			<p><strong>Pseudo-scoping out of tensed clauses: the case of cumulation</strong></p>
+
+			<p>Jonathan Palucci</p>
+			</td>
+			<td class="content-E">
+			<p><strong>A second-last position clitic in Sm&#39;algyax (Coast Tsimshian)</strong></p>
+
+			<p>Colin Brown &amp; Henry Davis</p>
+			</td>
+		</tr>
+		<tr>
+			<td>11:00-11:30</td>
+			<td colspan="2">Break</td>
+		</tr>
+		<tr>
+			<td class="content-O">11:30-12:00</td>
+			<td class="content-sp-O">
+			<p><strong>Experimental vs. elicited data in sign language syntax</strong></p>
+
+			<p>Jessica Lettieri, Mirko Santoro &amp; Carlo Geraci</p>
+			</td>
+			<td class="content-O">
+			<p><strong>Evidence from impersonals for [&plusmn;hearer]</strong></p>
+
+			<p>Carol Rose Little</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-E">12:00-12:30</td>
+			<td class="content-sp-E">
+			<p><strong>Close vs. Cloze: The role(s) of contact and expectancy in English pronoun preferences</strong></p>
+
+			<p>Shannon Bryant</p>
+			</td>
+			<td class="content-E">
+			<p><strong>Concord feeds apparent non-local allomorphy in Bidhaawyeet</strong></p>
+
+			<p>Andrew Murphy &amp; Bob Offer-Westort</p>
+			</td>
+		</tr>
+		<tr>
+			<td>12:30-2:00</td>
+			<td colspan="2">Lunch &amp; PUMP (food provided)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td class="session">
+				<p><strong>Session 5&nbsp;</strong>(32-141)</p>
+			</td>
+			<td class="session">
+				<p><strong>Session 6&nbsp;</strong>(32-155)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-O">2:00-2:30</td>
+			<td class="content-O">
+			<p><strong>Finite control in Brazilian Portuguese</strong></p>
+
+			<p>Julie Anne Legate &amp; Gesoel Mendes</p>
+			</td>
+			<td class="content-O">
+			<p><strong>Experimental evidence that learning morphophonological alternations starts local&nbsp;</strong></p>
+
+			<p>Caleb Belth</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-E">2:30-3:00</td>
+			<td class="content-E">
+			<p><strong>Resolution by case syncretism in Icelandic passives</strong></p>
+
+			<p>Jim Wood, Oddur Snorasson &amp; Einar&nbsp;Sigur&eth;sson</p>
+			</td>
+			<td class="content-E">
+			<p><strong>Phonetic faithfulness
+			in counterfeeding opacity</strong></p>
+
+			<p>Yeong-Joon Kim</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3:00-3:30</td>
+			<td colspan="2">Break</td>
+		</tr>
+		<tr>
+			<td class="poster">3:30-4:30</td>
+			<td class="poster" colspan="2">
+			<p><strong>Poster Session C</strong></p>
+
+			<p><a href="http://whereis.mit.edu/?go=32" style="box-sizing: inherit; background-color: transparent; color: inherit; outline-width: 0px;" target="_blank">The Vest Student Street</a>&nbsp;(outside 32-123/141)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-O">4:30-5:00</td>
+			<td class="content-O">
+			<p><strong>In defense of cyclic coordination structures: The view from German</strong></p>
+
+			<p>Philipp Weisser &amp; Luise Schwarzer</p>
+			</td>
+			<td class="content-O">
+			<p><strong>Marginal representations in loanword adaptation: affrication in Brazilian Portuguese English</strong></p>
+
+			<p>Nat&aacute;lia Brambatti Guzzo &amp; Guilherme Duarte Garcia</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="content-E">5:00-5:30</td>
+			<td class="content-E">
+			<p><strong>P<sup>0</sup>-stranding vs. <em>p<sup>0</sup></em>-stranding: Phasehood and antilocality in the adpositional phrase</strong></p>
+
+			<p>Andrew McInnerney</p>
+			</td>
+			<td class="content-E">
+			<p><strong>Beyond unpredictability: A GHG analysis of Greek noun stress</strong></p>
+
+			<p>Giorgos Markopoulos, Eirini Apostolopoulou, Vassiliki Apostolouda &amp; Anthi Revithiadou</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="keynote">5:30-6:30</td>
+			<td class="keynote" colspan="2">
+			<p><strong>Benjamin Storme</strong></p>
+
+			<p>(32-123)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>6:30-7:00</td>
+			<td colspan="2">Walk to dinner</td>
+		</tr>
+		<tr>
+			<td class="dinner">7:00</td>
+			<td class="dinner" colspan="2">
+			<p><strong>Conference Dinner </strong></p>
+
+			<p><strong>(Venue TBA)</strong></p>
+			</td>
+		</tr>
+	</table>
+	</div>
+</div>
+
+<div class="tabcontent" id="Poster">
+    <h3>Poster Session</h3>
+ 	<div style="overflow-x:auto;">
+	<table style="width:100%;">
+
+	    <colgroup>
+	        <col style="width: 45%;">
+	        <col style="width: 45%;">
+	    </colgroup>
+    		<tr>
+    			<td colspan="2" class="poster">
+    			<p><strong>Poster session A (MIT Museum, Friday, 6-7pm)</strong></p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Lucas Adelino &amp; Caitlin Smith</strong></td>
+    			<td class="content-O">Height Harmony and Nasal Vowels: An Argument for Agreement by Correspondence&nbsp;</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>David Adger</strong></td>
+    			<td class="content-E">The geometry of successive cyclicity</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Faruk Akkuş &amp; Lefteris Paparounas</strong></td>
+    			<td class="content-O">Reflexivization via Movement: Evidence from Turkish Verbal Reflexives&nbsp;</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Nikos Angelopoulos &amp; Chris Collins</strong></td>
+    			<td class="content-E">On implicit arguments and logophoricity: Accounting for exempt reflexives cross-linguistically</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Giuliano Armenante</strong></td>
+    			<td class="content-O">Temporal modifiers and attitude reports: Novel evidence for Keshet&#39;s IPG</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Andre Batchelder-Schwab</strong></td>
+    			<td class="content-E">Spoken, whistled, drummed, and fluted Kinande: an asymmetry for encoding pitch and rhythm</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Irina Burukina</strong></td>
+    			<td class="content-O">On the inventory of v and Voice</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Ma&scaron;a Be&scaron;lin</strong></td>
+    			<td class="content-E">Domain mismatches in syntax and morphophonology: The case of Bosnian/Croatian/Serbian adjectives</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Alma Frischoff</strong></td>
+    			<td class="content-O">Iterated Rationality Models and Conjunctive Readings of Disjunctions</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Daniel Greeson</strong></td>
+    			<td class="content-E">Prepositions and case at the syntax&ndash;prosody interface</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Jing Gao</strong></td>
+    			<td class="content-O">Optional classifiers in a &#39;classifiers-for-numerals&#39; language</td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" class="poster">
+    			<p><strong>Poster Session B (MIT Museum, Friday 7-8pm)</strong></p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>James Griffiths &amp; Craig Sailor</strong></td>
+    			<td class="content-E">On experiments on PPs with gaps in (syn, exp)</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Peter Grishin &amp; Anton Kukhto</strong></td>
+    			<td class="content-O">Infixing outward (Alternate Talk)</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Stephen Henhawk &amp; John Whitman</strong></td>
+    			<td class="content-E">A-Movement and Interpretation in a Northern Iroquoian Language</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Ad&egrave;le H&eacute;not-Mortier</strong></td>
+    			<td class="content-O">The French demonstrative paradigm: structurally transparent but semantically intricate</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Jens Hopperdietzel</strong></td>
+    			<td class="content-E">Change-of-state without morphology in Daakaka</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Jasper Jian</strong></td>
+    			<td class="content-O">Subjects in Igbo Interrogatives: Evidence for a non-cartographic left periphery</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Tomasz Klochowicz</strong></td>
+    			<td class="content-E">Free Choice Questions</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Jennifer Kuo</strong></td>
+    			<td class="content-O">Hiatus avoidance and the development of Māori passive allomorphy</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Haoming Li&nbsp;</strong></td>
+    			<td class="content-E">Dou and plural universal quantification in Mandarin Chinese</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Kang Franco Liu &amp; Sansan Claude Hien</strong></td>
+    			<td class="content-O">A novel way to diagnose phonological vs. suppletive allomorphy: Progressive STAMP morph formation in Lobi</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Matthew Loder, Jeremy Kuhn, Benjamin Spector</strong></td>
+    			<td class="content-E">Experimentally assessing the symmetry of presupposition filtering across disjunction</td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" class="poster">
+    			<p><strong>Poster Session C (Student Street, Saturday, 3.30-4.30pm)</strong></p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Jonathan MacDonald</strong></td>
+    			<td class="content-O">Eventive VPs project AspP; Stative VPs do not</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Rodrigo Ranero &amp; Justin Royer</strong></td>
+    			<td class="content-E">Deep and surface anaphora: Insights from Mayan (Alternate Talk)</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Aviv Schoenfeld &amp; Giada Palmieri</strong></td>
+    			<td class="content-O">Evaluating lexical countability with count-mass gender</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Eli Sharf</strong></td>
+    			<td class="content-E">Restrictive Modifiers in Parenthetical Positions (Alternate Talk)</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Sandhya Sundaresan &amp; Elsi Kaiser</strong></td>
+    			<td class="content-O">Perspectival possessor agreement in Finnish spatial PPs</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Wataru Uegaki, Anne Mucha, Nathaniel Imel, Shane Steinert-Threlkeld</strong></td>
+    			<td class="content-E">Deontic priority &ndash; converging evidence for a universal in modal semantics</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Alexander Wimmer &amp; Mingya Liu</strong></td>
+    			<td class="content-O">Perfecting imperative conditionals&nbsp;</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Pravaal Yadav</strong></td>
+    			<td class="content-E">Patterns and conditions on cross-clausal agreement in Hindi-Urdu&nbsp;</td>
+    		</tr>
+    		<tr>
+    			<td class="content-O"><strong>Shumian Ye &amp; Yiyang Guo</strong></td>
+    			<td class="content-O">Considering an issue: The doubt-suspect ambiguity of Mandarin huaiyi</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Ka-Fai Yip &amp; Xuetong Yuan</strong></td>
+    			<td class="content-E">Agreement in imperative clauses: evidence from object resumptive pronouns in Mandarin Chinese&nbsp;</td>
+    		</tr>
+    		<tr>
+    			<td class="content-E"><strong>Michelle Yuan</strong></td>
+    			<td class="content-E">More on &#39;Lexical DP Blocking&#39; effects in the PCC: Evidence from Mixtec&nbsp;</td>
+    		</tr>
+    </table>
+	</div>
+</div>
+</html>
